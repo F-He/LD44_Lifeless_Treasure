@@ -1,0 +1,17 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://scenes/objects/weapons/WeaponBase.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/weapons/Sniper.png" type="Texture" id=2]
+[ext_resource path="res://scenes/objects/bullets/SniperBullet.tscn" type="PackedScene" id=3]
+[ext_resource path="res://assets/sounds/LD44_shotgun.ogg" type="AudioStream" id=4]
+
+[node name="Weapon" instance=ExtResource( 1 )]
+texture = ExtResource( 2 )
+Bullet = ExtResource( 3 )
+
+[node name="Position2D" parent="." index="0"]
+position = Vector2( 9.01977, -0.493352 )
+
+[node name="ShotSound" parent="." index="2"]
+stream = ExtResource( 4 )
+

@@ -1,0 +1,68 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://scenes/Entities/SlimeMinion.gd" type="Script" id=1]
+[ext_resource path="res://assets/enemies/SlimeMinion_Animation 1_0.png" type="Texture" id=2]
+[ext_resource path="res://assets/enemies/SlimeMinion_Animation 1_1.png" type="Texture" id=3]
+[ext_resource path="res://assets/sounds/LD44_slime_hit_sound.ogg" type="AudioStream" id=4]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "moving",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 5.32716, 3.98039 )
+
+[sub_resource type="CircleShape2D" id=3]
+radius = 152.421
+
+[sub_resource type="CircleShape2D" id=4]
+radius = 8.64497
+
+[node name="SlimeMinion" type="KinematicBody2D"]
+collision_layer = 0
+collision_mask = 12
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 1 )
+animation = "moving"
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 1.93979, 0.969893 )
+shape = SubResource( 2 )
+
+[node name="DetectArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectArea"]
+shape = SubResource( 3 )
+
+[node name="DashTimer" type="Timer" parent="."]
+wait_time = 0.1
+one_shot = true
+
+[node name="DashCooldown" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
+[node name="DamageRadius" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DamageRadius"]
+shape = SubResource( 4 )
+
+[node name="HitSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+
+[connection signal="body_entered" from="DetectArea" to="." method="_on_DetectArea_body_entered"]
+[connection signal="body_exited" from="DetectArea" to="." method="_on_DetectArea_body_exited"]
+[connection signal="timeout" from="DashTimer" to="." method="_on_DashTimer_timeout"]
+[connection signal="timeout" from="DashCooldown" to="." method="_on_DashCooldown_timeout"]
+[connection signal="body_entered" from="DamageRadius" to="." method="_on_DamageRadius_body_entered"]

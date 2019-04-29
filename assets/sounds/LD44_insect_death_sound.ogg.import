@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/LD44_insect_death_sound.ogg-28e1069326cfc1b2c549adf819a5e8c5.oggstr"
+
+[deps]
+
+source_file="res://assets/sounds/LD44_insect_death_sound.ogg"
+dest_files=[ "res://.import/LD44_insect_death_sound.ogg-28e1069326cfc1b2c549adf819a5e8c5.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

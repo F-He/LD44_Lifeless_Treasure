@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/LD44_pick_up.ogg-de4f19d121b3ec735442f0b854aa644f.oggstr"
+
+[deps]
+
+source_file="res://assets/sounds/LD44_pick_up.ogg"
+dest_files=[ "res://.import/LD44_pick_up.ogg-de4f19d121b3ec735442f0b854aa644f.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://scenes/objects/bullets/BulletTemplate.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/bullets/SniperBullet.png" type="Texture" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 1.50084, 0.50366 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 1.50585, 0.503654 )
+
+[node name="Bullet" instance=ExtResource( 1 )]
+speed = 100
+damage = 125
+
+[node name="Sprite" parent="." index="0"]
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" parent="." index="1"]
+shape = SubResource( 1 )
+
+[node name="Area2D" parent="." index="2"]
+collision_layer = 8
+collision_mask = 0
+
+[node name="CollisionShape2D" parent="Area2D" index="0"]
+shape = SubResource( 2 )
+

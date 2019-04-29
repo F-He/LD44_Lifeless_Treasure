@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/LD44_Larry_Death_sound.ogg-ac69b693fb57b82cc14ab78c7dba0314.oggstr"
+
+[deps]
+
+source_file="res://assets/sounds/LD44_Larry_Death_sound.ogg"
+dest_files=[ "res://.import/LD44_Larry_Death_sound.ogg-ac69b693fb57b82cc14ab78c7dba0314.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/LD44_button_click_sound.ogg-9c1baa7e934c14a5a15f495128154923.oggstr"
+
+[deps]
+
+source_file="res://assets/sounds/LD44_button_click_sound.ogg"
+dest_files=[ "res://.import/LD44_button_click_sound.ogg-9c1baa7e934c14a5a15f495128154923.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

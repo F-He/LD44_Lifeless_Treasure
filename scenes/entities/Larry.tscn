@@ -1,0 +1,108 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://scenes/Entities/Larry.gd" type="Script" id=1]
+[ext_resource path="res://assets/enemies/larry_Walking_0.png" type="Texture" id=2]
+[ext_resource path="res://assets/enemies/larry_Walking_1.png" type="Texture" id=3]
+[ext_resource path="res://assets/enemies/larry_Walking_2.png" type="Texture" id=4]
+[ext_resource path="res://assets/sounds/LD44_Larry_hit.ogg" type="AudioStream" id=5]
+[ext_resource path="res://assets/hud/HealthBarUnder.png" type="Texture" id=6]
+[ext_resource path="res://assets/hud/HealthBarOver.png" type="Texture" id=7]
+[ext_resource path="res://assets/hud/HealthBarProgress.png" type="Texture" id=8]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ) ],
+"loop": true,
+"name": "moving",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 14.1484, 14.0633 )
+
+[sub_resource type="CircleShape2D" id=3]
+radius = 172.226
+
+[node name="Larry" type="KinematicBody2D"]
+position = Vector2( 0, 0.583977 )
+collision_layer = 0
+collision_mask = 12
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 1 )
+animation = "moving"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0.314011, 1.67478 )
+shape = SubResource( 2 )
+
+[node name="Firerate" type="Timer" parent="."]
+
+[node name="DetectRadius" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectRadius"]
+shape = SubResource( 3 )
+
+[node name="MoveTimer" type="Timer" parent="."]
+one_shot = true
+
+[node name="MoveCooldown" type="Timer" parent="."]
+one_shot = true
+
+[node name="Position2D" type="Position2D" parent="."]
+position = Vector2( 7.57924, 0.509054 )
+
+[node name="SpawnPoints" type="Node2D" parent="."]
+editor/display_folded = true
+
+[node name="SpawnPoint01" type="Position2D" parent="SpawnPoints"]
+position = Vector2( -45.8422, -1.16795 )
+
+[node name="SpawnPoint02" type="Position2D" parent="SpawnPoints"]
+position = Vector2( 0.583984, 45.2582 )
+
+[node name="SpawnPoint03" type="Position2D" parent="SpawnPoints"]
+position = Vector2( 45.8422, -0.291985 )
+
+[node name="SpawnPoint04" type="Position2D" parent="SpawnPoints"]
+position = Vector2( -1.52588e-005, -39.7104 )
+
+[node name="SpawnPoint05" type="Position2D" parent="SpawnPoints"]
+position = Vector2( -30.3668, -28.3229 )
+
+[node name="SpawnPoint06" type="Position2D" parent="SpawnPoints"]
+position = Vector2( -31.8268, 27.4469 )
+
+[node name="SpawnPoint07" type="Position2D" parent="SpawnPoints"]
+position = Vector2( 30.6588, 29.7828 )
+
+[node name="SpawnPoint08" type="Position2D" parent="SpawnPoints"]
+position = Vector2( 27.1549, -23.0671 )
+
+[node name="SpawnCooldown" type="Timer" parent="."]
+wait_time = 15.0
+one_shot = true
+
+[node name="HitSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+
+[node name="Healthbar" type="TextureProgress" parent="."]
+modulate = Color( 1, 1, 1, 0.498039 )
+margin_left = -11.3574
+margin_top = 16.3855
+margin_right = 11.6426
+margin_bottom = 18.3855
+value = 100.0
+texture_under = ExtResource( 6 )
+texture_over = ExtResource( 7 )
+texture_progress = ExtResource( 8 )
+nine_patch_stretch = true
+
+[connection signal="timeout" from="Firerate" to="." method="_on_Firerate_timeout"]
+[connection signal="timeout" from="MoveTimer" to="." method="_on_MoveTimer_timeout"]
+[connection signal="timeout" from="MoveCooldown" to="." method="_on_MoveCooldown_timeout"]
+[connection signal="timeout" from="SpawnCooldown" to="." method="_on_SpawnCooldown_timeout"]

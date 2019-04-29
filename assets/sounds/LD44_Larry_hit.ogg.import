@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/LD44_Larry_hit.ogg-ae783320c16519a5bfa8952ee1884406.oggstr"
+
+[deps]
+
+source_file="res://assets/sounds/LD44_Larry_hit.ogg"
+dest_files=[ "res://.import/LD44_Larry_hit.ogg-ae783320c16519a5bfa8952ee1884406.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

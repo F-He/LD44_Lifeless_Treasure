@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/LD44_sniper.ogg-7e365887b17cf22a9a19bbd517f81497.oggstr"
+
+[deps]
+
+source_file="res://assets/sounds/LD44_sniper.ogg"
+dest_files=[ "res://.import/LD44_sniper.ogg-7e365887b17cf22a9a19bbd517f81497.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

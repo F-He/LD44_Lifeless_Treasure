@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/LD44_battle_soundtrack.ogg-7d90881a1544ac8b7bed9d4815d91841.oggstr"
+
+[deps]
+
+source_file="res://assets/sounds/LD44_battle_soundtrack.ogg"
+dest_files=[ "res://.import/LD44_battle_soundtrack.ogg-7d90881a1544ac8b7bed9d4815d91841.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/LD44_button_hover_sound.ogg-5f6442e29fdb5d6af121a83aa46fc256.oggstr"
+
+[deps]
+
+source_file="res://assets/sounds/LD44_button_hover_sound.ogg"
+dest_files=[ "res://.import/LD44_button_hover_sound.ogg-5f6442e29fdb5d6af121a83aa46fc256.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

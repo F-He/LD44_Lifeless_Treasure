@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/LD44_shop_music_2.ogg-dde6d1d50f4c410aad3681e47fc3a4d2.oggstr"
+
+[deps]
+
+source_file="res://assets/sounds/LD44_shop_music_2.ogg"
+dest_files=[ "res://.import/LD44_shop_music_2.ogg-dde6d1d50f4c410aad3681e47fc3a4d2.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,58 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://scenes/objects/weapons/WeaponBase.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/sounds/LD44_shotgun.ogg" type="AudioStream" id=2]
+
+[sub_resource type="StreamTexture" id=1]
+load_path = "res://.import/Shotgun.png-4661055295a838fe001b90597f9c1c21.stex"
+
+[sub_resource type="GDScript" id=2]
+script/source = "extends Sprite
+
+export (PackedScene) var Bullet
+export var rate_of_fire = 1.0
+export var spread = 0.5
+
+var can_shoot = false
+
+func _ready():
+	$Firerate.wait_time = rate_of_fire * PlayerVariables.fire_rate_multiplier
+	$Firerate.start()
+	randomize()
+
+func _process(delta):
+	look_at(get_global_mouse_position())
+	flip_weapon()
+	
+	if Input.is_action_pressed(\"left_click\"):
+		shoot()
+
+
+func shoot():
+	if can_shoot:
+		$ShotSound.play()
+		$Firerate.start()
+		can_shoot = false
+		
+		for i in range(5):
+			var bullet = Bullet.instance()
+			Global.current_scene.add_child(bullet)
+			bullet.start($Position2D.global_position, Vector2(1,0).rotated(global_rotation + rand_range(-spread, spread)))
+
+func flip_weapon():
+	if global_rotation > -1.5 && 1.5 > global_rotation:
+		flip_v = false
+	else:
+		flip_v = true
+
+func _on_Firerate_timeout():
+	can_shoot = true"
+
+[node name="Weapon" instance=ExtResource( 1 )]
+texture = SubResource( 1 )
+script = SubResource( 2 )
+rate_of_fire = 0.75
+
+[node name="ShotSound" parent="." index="2"]
+stream = ExtResource( 2 )
+

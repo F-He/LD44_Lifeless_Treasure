@@ -1,0 +1,42 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://scenes/Sounds.gd" type="Script" id=1]
+[ext_resource path="res://assets/sounds/LD44_main_menu_music.ogg" type="AudioStream" id=2]
+[ext_resource path="res://assets/sounds/LD44_shop_music_2.ogg" type="AudioStream" id=3]
+[ext_resource path="res://assets/sounds/LD44_battle_soundtrack.ogg" type="AudioStream" id=4]
+[ext_resource path="res://assets/sounds/LD44_insect_death_sound.ogg" type="AudioStream" id=5]
+[ext_resource path="res://assets/sounds/LD44_button_click_sound.ogg" type="AudioStream" id=6]
+[ext_resource path="res://assets/sounds/LD44_Larry_Death_sound.ogg" type="AudioStream" id=7]
+[ext_resource path="res://assets/sounds/LD44_slime_death_sound.ogg" type="AudioStream" id=8]
+[ext_resource path="res://assets/sounds/LD44_slime_boss_death_sound.ogg" type="AudioStream" id=9]
+
+[node name="Sounds" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="MenuMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 2 )
+volume_db = -14.0
+
+[node name="ShopMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+volume_db = -9.087
+
+[node name="ArenaMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+volume_db = -18.138
+
+[node name="InsectDeathSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+
+[node name="ButtonClickSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
+
+[node name="LarryDeathSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 7 )
+
+[node name="SlimeMinionDeathSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 8 )
+
+[node name="SlimeBossDeathSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 9 )
+

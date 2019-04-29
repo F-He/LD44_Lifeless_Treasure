@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://scenes/objects/bullets/BulletTemplate.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/bullets/BasicBullet.png" type="Texture" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 0.501611, 0.507283 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 0.503269, 0.495229 )
+
+[node name="Bullet" index="0" instance=ExtResource( 1 )]
+modulate = Color( 1, 0.843137, 0, 1 )
+speed = 75
+damage = 25
+
+[node name="Sprite" parent="." index="0"]
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" parent="." index="1"]
+shape = SubResource( 1 )
+
+[node name="Area2D" parent="." index="2"]
+collision_layer = 8
+collision_mask = 0
+
+[node name="CollisionShape2D" parent="Area2D" index="0"]
+shape = SubResource( 2 )
+

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/LD44_foot_steps.ogg-18938f5301266d167d32b88024cba36d.oggstr"
+
+[deps]
+
+source_file="res://assets/sounds/LD44_foot_steps.ogg"
+dest_files=[ "res://.import/LD44_foot_steps.ogg-18938f5301266d167d32b88024cba36d.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

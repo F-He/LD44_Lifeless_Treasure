@@ -1,0 +1,213 @@
+[gd_scene load_steps=22 format=2]
+
+[ext_resource path="res://scenes/levels/ShopArea.gd" type="Script" id=1]
+[ext_resource path="res://scenes/tilesets/ShopTiles.tres" type="TileSet" id=2]
+[ext_resource path="res://scenes/tilesets/ShopProps.tres" type="TileSet" id=3]
+[ext_resource path="res://scenes/entities/Player.tscn" type="PackedScene" id=4]
+[ext_resource path="res://assets/the_death.png" type="Texture" id=5]
+[ext_resource path="res://assets/weapons/MP.png" type="Texture" id=6]
+[ext_resource path="res://assets/weapons/Pistol.png" type="Texture" id=7]
+[ext_resource path="res://assets/weapons/Shotgun.png" type="Texture" id=8]
+[ext_resource path="res://assets/weapons/RocketLauncher.png" type="Texture" id=9]
+[ext_resource path="res://assets/weapons/Sniper.png" type="Texture" id=10]
+[ext_resource path="res://assets/RateOfFirePowerUp.png" type="Texture" id=11]
+[ext_resource path="res://assets/sounds/LD44_pick_up.ogg" type="AudioStream" id=12]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 4.53621, 6.72366 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 19.6364, 11.3294 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 4.87744, 6.71469 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 4.69241, 7.79034 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 5.52859, 6.8382 )
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 7.09995, 7.91434 )
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 8.04712, 8.33542 )
+
+[sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 10, 13.6859 )
+
+[sub_resource type="RectangleShape2D" id=9]
+extents = Vector2( 4.99445, 4.62888 )
+
+[node name="ShopArea" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Background" type="ColorRect" parent="."]
+margin_left = -558.0
+margin_top = -294.0
+margin_right = 1599.0
+margin_bottom = 957.0
+color = Color( 0.0862745, 0.0627451, 0.0705882, 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 16, 16 )
+collision_mask = 8
+format = 1
+tile_data = PoolIntArray( 1114131, 2, 0, 1114132, 1, 0, 1114133, 1, 0, 1114134, 1, 0, 1114135, 1, 0, 1114136, 10, 0, 1114137, 1, 0, 1114138, 1, 0, 1114139, 1, 0, 1114140, 1, 0, 1114141, 3, 0, 1179666, 2, 0, 1179667, 1, 0, 1179668, 0, 0, 1179669, 0, 0, 1179670, 0, 0, 1179671, 0, 0, 1179672, 0, 0, 1179673, 0, 0, 1179674, 0, 0, 1179675, 0, 0, 1179676, 0, 0, 1179677, 1, 0, 1179678, 3, 0, 1245201, 2, 0, 1245202, 1, 0, 1245203, 0, 0, 1245204, 0, 0, 1245205, 0, 0, 1245206, 0, 0, 1245207, 0, 0, 1245208, 0, 0, 1245209, 0, 0, 1245210, 0, 0, 1245211, 0, 0, 1245212, 0, 0, 1245213, 0, 0, 1245214, 1, 0, 1245215, 3, 0, 1310737, 2, 0, 1310738, 0, 0, 1310739, 0, 0, 1310740, 0, 0, 1310741, 0, 0, 1310742, 0, 0, 1310743, 0, 0, 1310744, 0, 0, 1310745, 0, 0, 1310746, 0, 0, 1310747, 0, 0, 1310748, 0, 0, 1310749, 0, 0, 1310750, 0, 0, 1310751, 3, 0, 1376273, 2, 0, 1376274, 0, 0, 1376275, 0, 0, 1376276, 0, 0, 1376277, 0, 0, 1376278, 0, 0, 1376279, 0, 0, 1376280, 0, 0, 1376281, 0, 0, 1376282, 0, 0, 1376283, 0, 0, 1376284, 0, 0, 1376285, 0, 0, 1376286, 0, 0, 1376287, 3, 0, 1441809, 2, 0, 1441810, 0, 0, 1441811, 0, 0, 1441812, 0, 0, 1441813, 0, 0, 1441814, 0, 0, 1441815, 0, 0, 1441816, 0, 0, 1441817, 0, 0, 1441818, 0, 0, 1441819, 0, 0, 1441820, 0, 0, 1441821, 0, 0, 1441822, 0, 0, 1441823, 3, 0, 1507345, 2, 0, 1507346, 0, 0, 1507347, 0, 0, 1507348, 0, 0, 1507349, 0, 0, 1507350, 0, 0, 1507351, 0, 0, 1507352, 0, 0, 1507353, 0, 0, 1507354, 0, 0, 1507355, 0, 0, 1507356, 0, 0, 1507357, 0, 0, 1507358, 0, 0, 1507359, 3, 0, 1572881, 2, 0, 1572882, 0, 0, 1572883, 0, 0, 1572884, 0, 0, 1572885, 0, 0, 1572886, 0, 0, 1572887, 0, 0, 1572888, 0, 0, 1572889, 0, 0, 1572890, 0, 0, 1572891, 0, 0, 1572892, 0, 0, 1572893, 0, 0, 1572894, 0, 0, 1572895, 3, 0, 1638417, 4, 0, 1638418, 5, 0, 1638419, 0, 0, 1638420, 0, 0, 1638421, 0, 0, 1638422, 0, 0, 1638423, 0, 0, 1638424, 0, 0, 1638425, 0, 0, 1638426, 0, 0, 1638427, 0, 0, 1638428, 0, 0, 1638429, 0, 0, 1638430, 7, 0, 1638431, 8, 0, 1703954, 4, 0, 1703955, 5, 0, 1703956, 0, 0, 1703957, 0, 0, 1703958, 0, 0, 1703959, 0, 0, 1703960, 0, 0, 1703961, 0, 0, 1703962, 0, 0, 1703963, 0, 0, 1703964, 0, 0, 1703965, 7, 0, 1703966, 8, 0, 1769491, 4, 0, 1769492, 6, 0, 1769493, 6, 0, 1769494, 6, 0, 1769495, 6, 0, 1769496, 6, 0, 1769497, 6, 0, 1769498, 6, 0, 1769499, 6, 0, 1769500, 6, 0, 1769501, 8, 0 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="TileMap2" type="TileMap" parent="."]
+tile_set = ExtResource( 3 )
+cell_size = Vector2( 16, 16 )
+format = 1
+tile_data = PoolIntArray( 1245205, 0, 0, 1245210, 0, 0, 1376277, 0, 0, 1376282, 0, 0, 1507349, 0, 0, 1507354, 0, 0, 1638421, 0, 0, 1638426, 0, 0 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Player" parent="." instance=ExtResource( 4 )]
+position = Vector2( 394.877, 419.464 )
+
+[node name="TheDeath" type="StaticBody2D" parent="."]
+editor/display_folded = true
+position = Vector2( 392.397, 329.255 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="Sprite" type="Sprite" parent="TheDeath"]
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TheDeath"]
+position = Vector2( -0.0595398, 7.25139 )
+shape = SubResource( 1 )
+
+[node name="Interact" type="Area2D" parent="TheDeath"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TheDeath/Interact"]
+position = Vector2( 0.132568, 25.8339 )
+shape = SubResource( 2 )
+
+[node name="ShopItems" type="Node" parent="."]
+
+[node name="MP" type="Sprite" parent="ShopItems"]
+editor/display_folded = true
+position = Vector2( 351.615, 340.204 )
+texture = ExtResource( 6 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="InteractArea" type="Area2D" parent="ShopItems/MP"]
+
+[node name="Area" type="CollisionShape2D" parent="ShopItems/MP/InteractArea"]
+position = Vector2( -0.154907, 6.40439 )
+shape = SubResource( 3 )
+
+[node name="Pistol" type="Sprite" parent="ShopItems"]
+editor/display_folded = true
+position = Vector2( 351.849, 372.083 )
+texture = ExtResource( 7 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="InteractArea" type="Area2D" parent="ShopItems/Pistol"]
+
+[node name="Area" type="CollisionShape2D" parent="ShopItems/Pistol/InteractArea"]
+position = Vector2( -0.488342, 8.05774 )
+shape = SubResource( 4 )
+
+[node name="Shotgun" type="Sprite" parent="ShopItems"]
+editor/display_folded = true
+position = Vector2( 431.878, 340.268 )
+texture = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="InteractArea" type="Area2D" parent="ShopItems/Shotgun"]
+
+[node name="Area" type="CollisionShape2D" parent="ShopItems/Shotgun/InteractArea"]
+position = Vector2( 0.115997, 5.98315 )
+shape = SubResource( 5 )
+
+[node name="RocketLauncher" type="Sprite" parent="ShopItems"]
+editor/display_folded = true
+position = Vector2( 431.846, 308.189 )
+texture = ExtResource( 9 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="InteractArea" type="Area2D" parent="ShopItems/RocketLauncher"]
+
+[node name="Area" type="CollisionShape2D" parent="ShopItems/RocketLauncher/InteractArea"]
+position = Vector2( 0.0315247, 5.31604 )
+shape = SubResource( 6 )
+
+[node name="Sniper" type="Sprite" parent="ShopItems"]
+editor/display_folded = true
+position = Vector2( 352.777, 308.288 )
+texture = ExtResource( 10 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="InteractArea" type="Area2D" parent="ShopItems/Sniper"]
+
+[node name="Area" type="CollisionShape2D" parent="ShopItems/Sniper/InteractArea"]
+position = Vector2( 0, 5.34567 )
+shape = SubResource( 7 )
+
+[node name="RateOfFirePowerUp" type="Sprite" parent="ShopItems"]
+editor/display_folded = true
+position = Vector2( 431.957, 403.926 )
+scale = Vector2( 0.598816, 0.598816 )
+texture = ExtResource( 11 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="InteractArea" type="Area2D" parent="ShopItems/RateOfFirePowerUp"]
+
+[node name="Area" type="CollisionShape2D" parent="ShopItems/RateOfFirePowerUp/InteractArea"]
+position = Vector2( 0.24292, 13.8307 )
+shape = SubResource( 8 )
+
+[node name="DoorArea" type="Area2D" parent="."]
+editor/display_folded = true
+position = Vector2( 392.008, 277.182 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="DoorCollisionEnterArea" type="CollisionShape2D" parent="DoorArea"]
+shape = SubResource( 9 )
+
+[node name="PickupSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 12 )
+
+[connection signal="body_entered" from="TheDeath/Interact" to="." method="_on_Interact_body_entered"]
+[connection signal="body_exited" from="TheDeath/Interact" to="." method="_on_Interact_body_exited"]
+[connection signal="body_entered" from="ShopItems/MP/InteractArea" to="." method="_on_MP_buy_area_body_entered"]
+[connection signal="body_exited" from="ShopItems/MP/InteractArea" to="." method="_on_buy_area_body_exited"]
+[connection signal="body_entered" from="ShopItems/Pistol/InteractArea" to="." method="_on_Pistol_buy_area_body_entered"]
+[connection signal="body_exited" from="ShopItems/Pistol/InteractArea" to="." method="_on_buy_area_body_exited"]
+[connection signal="body_entered" from="ShopItems/Shotgun/InteractArea" to="." method="_on_Shotgun_buy_area_body_entered"]
+[connection signal="body_exited" from="ShopItems/Shotgun/InteractArea" to="." method="_on_buy_area_body_exited"]
+[connection signal="body_entered" from="ShopItems/RocketLauncher/InteractArea" to="." method="_on_RocketLauncher_buy_area_body_entered"]
+[connection signal="body_exited" from="ShopItems/RocketLauncher/InteractArea" to="." method="_on_buy_area_body_exited"]
+[connection signal="body_entered" from="ShopItems/Sniper/InteractArea" to="." method="_on_Sniper_buy_area_body_entered"]
+[connection signal="body_exited" from="ShopItems/Sniper/InteractArea" to="." method="_on_buy_area_body_exited"]
+[connection signal="body_entered" from="ShopItems/RateOfFirePowerUp/InteractArea" to="." method="_on_Rate_Of_Fire_buy_area_body_entered"]
+[connection signal="body_exited" from="ShopItems/RateOfFirePowerUp/InteractArea" to="." method="_on_buy_area_body_exited"]
+[connection signal="body_entered" from="DoorArea" to="." method="_on_DoorArea_body_entered"]
