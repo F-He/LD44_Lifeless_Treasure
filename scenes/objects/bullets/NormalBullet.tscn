@@ -9,10 +9,11 @@ extents = Vector2( 0.501611, 0.507283 )
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 0.503269, 0.495229 )
 
-[node name="Bullet" index="0" instance=ExtResource( 1 )]
+[node name="Bullet" instance=ExtResource( 1 )]
 modulate = Color( 1, 0.843137, 0, 1 )
-speed = 75
+speed = 150
 damage = 25
+lifetime = 0.5
 
 [node name="Sprite" parent="." index="0"]
 texture = ExtResource( 2 )

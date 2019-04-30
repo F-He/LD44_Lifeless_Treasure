@@ -4,7 +4,7 @@
 [ext_resource path="res://assets/sounds/LD44_pistol.ogg" type="AudioStream" id=2]
 
 [node name="Weapon" instance=ExtResource( 1 )]
-rate_of_fire = 0.15
+rate_of_fire = 0.1
 
 [node name="ShotSound" parent="." index="2"]
 stream = ExtResource( 2 )

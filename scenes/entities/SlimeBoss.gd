@@ -1,9 +1,9 @@
 extends KinematicBody2D
 
-var projectile01 = preload("res://scenes/Entities/SlimeProjectile01.tscn")
-var projectile02 = preload("res://scenes/Entities/SlimeProjectile02.tscn")
-var projectile03 = preload("res://scenes/Entities/SlimeProjectile03.tscn")
-var projectile04 = preload("res://scenes/Entities/SlimeProjectile04.tscn")
+var projectile01 = preload("res://scenes/entities/SlimeProjectile01.tscn")
+var projectile02 = preload("res://scenes/entities/SlimeProjectile02.tscn")
+var projectile03 = preload("res://scenes/entities/SlimeProjectile03.tscn")
+var projectile04 = preload("res://scenes/entities/SlimeProjectile04.tscn")
 
 var max_health = 20000
 var health = 20000
@@ -35,6 +35,10 @@ func _ready():
 	HUD.show_boss_healthbar(true)
 	HUD.change_boss_health_label("Slime Boss: %s Health" % health)
 	HUD.change_boss_health_value(health, max_health)
+
+
+func _exit_tree():
+	HUD.show_boss_healthbar(false)
 
 
 func _process(delta):

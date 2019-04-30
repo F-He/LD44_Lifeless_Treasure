@@ -27,14 +27,14 @@ font_data = ExtResource( 6 )
 size = 34
 font_data = ExtResource( 6 )
 
-[sub_resource type="DynamicFont" id=5]
+[sub_resource type="DynamicFont" id=4]
 size = 90
 font_data = ExtResource( 6 )
 
-[sub_resource type="DynamicFont" id=6]
+[sub_resource type="DynamicFont" id=5]
 font_data = ExtResource( 6 )
 
-[sub_resource type="Curve2D" id=4]
+[sub_resource type="Curve2D" id=6]
 _data = {
 "points": PoolVector2Array( 62.9795, -41.6116, -62.9795, 41.6116, 125.371, 133.528, 0, 0, 0, 0, 85.3712, 267.213, -22.9552, -56.4321, 22.9552, 56.4321, 80.108, 404.055, -83.5803, 42.1816, 83.5803, -42.1816, 355.898, 443.003, -38.8472, 53.582, 38.8472, -53.582, 456.951, 188.265, -66.5111, -1.71006, 66.5111, 1.71006, 705.373, 152.476, -35.3156, -35.3413, 35.3156, 35.3413, 809.584, 203.002, 0, 0, 0, 0, 778.005, 323.003, 87.1119, -7.41028, -87.1119, 7.41028, 660.11, 428.266, 83.5803, 15.3906, -83.5803, -15.3906, 523.267, 272.476, 37.0814, -46.1718, -37.0814, 46.1718, 445.372, 363.003, 2.35438, 65.5525, -2.35438, -65.5525, 352.74, 234.581, 73.5742, 17.1006, -73.5742, -17.1006, 288.53, 74.5807, 49.4419, -35.3413, -49.4419, 35.3413, 125.371, 133.528 )
 }
@@ -135,7 +135,7 @@ texture = ExtResource( 11 )
 [node name="Title" type="Label" parent="CanvasLayer"]
 margin_right = 1023.0
 margin_bottom = 196.0
-custom_fonts/font = SubResource( 5 )
+custom_fonts/font = SubResource( 4 )
 text = "Lifeless Treasure"
 align = 1
 valign = 1
@@ -145,7 +145,7 @@ margin_left = 5.41501
 margin_top = 576.699
 margin_right = 122.415
 margin_bottom = 593.699
-custom_fonts/font = SubResource( 6 )
+custom_fonts/font = SubResource( 5 )
 text = "made by grewoss"
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -158,7 +158,7 @@ tile_data = PoolIntArray( -5, 0, 0, -4, 0, 0, -3, 0, 0, -2, 0, 0, -1, 0, 0, -655
 position = Vector2( 900.8, 597.236 )
 rotation = -3.13621
 scale = Vector2( 1.01724, 1.05038 )
-curve = SubResource( 4 )
+curve = SubResource( 6 )
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
 position = Vector2( 125.371, 133.528 )

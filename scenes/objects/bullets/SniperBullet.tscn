@@ -10,8 +10,8 @@ extents = Vector2( 1.50084, 0.50366 )
 extents = Vector2( 1.50585, 0.503654 )
 
 [node name="Bullet" instance=ExtResource( 1 )]
-speed = 100
-damage = 125
+speed = 200
+damage = 175
 
 [node name="Sprite" parent="." index="0"]
 texture = ExtResource( 2 )

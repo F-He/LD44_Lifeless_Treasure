@@ -43,7 +43,6 @@ func round_one():
 	current_round = Rounds.one
 	for i in range(8):
 		spawn_entity(insect, spawn_points[randi() % spawn_points.size()])
-#	spawn_entity(slime_boss, $SpawnPoints/BossSpawnPoint.position)
 
 func round_two():
 	current_round = Rounds.two
@@ -126,6 +125,6 @@ func _on_RoundCountdown_timeout():
 			round_eight()
 		Rounds.eight:
 			Global.switch_scene_to("res://scenes/levels/WonScreen.tscn")
+			HUD.show_boss_healthbar(false)
 		Rounds.none:
-			round_four()
-#			round_one()
+			round_one()

@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=2]
 
-[ext_resource path="res://scenes/Entities/Insect.gd" type="Script" id=1]
+[ext_resource path="res://scenes/entities/Insect.gd" type="Script" id=1]
 [ext_resource path="res://assets/enemies/Insect_moving_0.png" type="Texture" id=2]
 [ext_resource path="res://assets/enemies/Insect_moving_1.png" type="Texture" id=3]
 [ext_resource path="res://assets/sounds/LD44_insect_hit.ogg" type="AudioStream" id=4]

@@ -84,6 +84,7 @@ func _process(delta):
 
 func die():
 	queue_free()
+	HUD.show_boss_healthbar(false)
 	Global.switch_scene_to("res://scenes/levels/GameOverScreen.tscn")
 	Sounds.play_arena_music(false)
 	Sounds.play_shop_music(false)

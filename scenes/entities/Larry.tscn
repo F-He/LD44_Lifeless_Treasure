@@ -1,6 +1,6 @@
 [gd_scene load_steps=12 format=2]
 
-[ext_resource path="res://scenes/Entities/Larry.gd" type="Script" id=1]
+[ext_resource path="res://scenes/entities/Larry.gd" type="Script" id=1]
 [ext_resource path="res://assets/enemies/larry_Walking_0.png" type="Texture" id=2]
 [ext_resource path="res://assets/enemies/larry_Walking_1.png" type="Texture" id=3]
 [ext_resource path="res://assets/enemies/larry_Walking_2.png" type="Texture" id=4]
